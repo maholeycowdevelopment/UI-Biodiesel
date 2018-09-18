@@ -1,19 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Grid, Image, Segment} from "semantic-ui-react";
+import "semantic-ui-css";
+
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <div>
+<Grid columns={3} divided style={{height: '100vh'}}>
+    <Grid.Row stretched>
+
+      <Grid.Column width={12}>
+        <Segment style={{height: '70%'}}>Image Section</Segment>
+        <Segment style={{height: '30%'}}>Text output section</Segment>
+      </Grid.Column>
+      <Grid.Column width={4}>
+        <Segment>User input section</Segment>
+      </Grid.Column>
+    </Grid.Row>
+  </Grid>
+  </div>
     );
   }
 }
