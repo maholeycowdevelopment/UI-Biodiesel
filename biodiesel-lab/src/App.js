@@ -9,15 +9,15 @@ class App extends Component {
   render() {
     return (
       <div>
-<Grid columns={3} divided style={{height: '100vh'}}>
-    <Grid.Row stretched>
+<Grid padded='false' columns={3} divided style={{height: '100vh'}}>
+    <Grid.Row style={{padding: '0em'}} stretched>
 
-      <Grid.Column width={12}>
-        <Segment style={{height: '70%'}}>Image Section</Segment>
-        <Segment style={{height: '30%'}}>Text output section</Segment>
+      <Grid.Column style={{padding: '0em'}} width={12}>
+        <Segment  style={{height: '70%', margin: '0em'}}>Image Section</Segment>
+        <Segment  style={{height: '30%', margin: '0em'}}>Text output section</Segment>
       </Grid.Column>
-      <Grid.Column width={4}>
-        <Segment>User input section</Segment>
+      <Grid.Column style={{padding: '0em'}} width={4}>
+        <Segment >User input section</Segment>
       </Grid.Column>
     </Grid.Row>
   </Grid>
