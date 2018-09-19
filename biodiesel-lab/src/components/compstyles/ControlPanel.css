@@ -1,0 +1,51 @@
+/* Border styling for control panel */
+.control-panel {
+  border-style: solid;
+  border-width: thin;
+  border-radius: 25px;
+  background: #85754f;
+  padding: 20px;
+  width: fit-content;
+  height: fit-content;
+}
+
+/* Text styling */
+.header-text {
+  font-weight: bold;
+}
+
+/* Arrow styling */
+i {
+  border: solid #eeb100;
+  border-width: 0 7px 7px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.arrow-container {
+  margin: 10px;
+  width: 90%;
+  text-align: center;
+}
+
+.arrow-right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  margin-left: 10px;
+}
+
+.arrow-left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  margin-right: 10px;
+}
+
+/* Button styling */
+.control-btn {
+  background-color: #eeb100;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  margin: auto;
+  width: 100%;
+}
