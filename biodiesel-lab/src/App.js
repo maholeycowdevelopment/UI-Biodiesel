@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import ControlPanel from "./components/station1/ControlPanel";
-import SidePanel from "./components/shared/SidePanel";
+import StationOne from "./components/StationOne";
 
 class App extends Component {
   constructor(props) {
@@ -10,14 +9,22 @@ class App extends Component {
     this.state = { currentStation: 0 };
   }
 
+  nextStation() {
+    if (this.state.currentStation < 6) {
+      this.setState({
+        currentStation: ++this.state.currentStation
+      });
+    }
+  }
+
   render() {
-    return (
-      <div>
-        <h1>Map Page</h1>
-        <ControlPanel />
-        <SidePanel />
-      </div>
-    );
+    switch (this.state.currentStation) {
+      default:
+        return <StationOne />;
+      case 0:
+        return <StationOne />;
+        break;
+    }
   }
 }
 
