@@ -10,7 +10,7 @@ class StationTwo extends Component {
     return (
       <div>
         <h1>Station Two</h1>
-        <SidePanel />
+        <SidePanel {...this.props} />
       </div>
     );
   }

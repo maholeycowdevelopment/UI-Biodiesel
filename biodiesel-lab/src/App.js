@@ -18,7 +18,7 @@ class App extends Component {
   nextStation() {
     if (this.state.currentStation < 6) {
       this.setState({
-        currentStation: ++this.state.currentStation
+        currentStation: this.state.currentStation + 1
       });
     }
   }

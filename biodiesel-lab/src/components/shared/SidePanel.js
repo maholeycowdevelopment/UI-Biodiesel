@@ -9,7 +9,7 @@ class SidePanel extends Component {
         <div className="img-container">
           <img src={logo} alt="University Logo" />
         </div>
-        <button>Next</button>
+        <button onClick={this.props.nextStation}>Next</button>
       </div>
     );
   }

@@ -12,7 +12,7 @@ class StationOne extends Component {
       <div>
         <h1>Map Page</h1>
         <ControlPanel />
-        <SidePanel />
+        <SidePanel {...this.props} />
       </div>
     );
   }
