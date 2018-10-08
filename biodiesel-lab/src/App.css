@@ -1,52 +1,21 @@
-html,
-body,
-.viewport {
-  width: 100%;
-  height: 100%;
+* {
   margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-/* encapsulate the various syntax in helper clases */
-/* inspired by http://infrequently.org/2009/08/css-3-progress/ */
-
-/* items flex/expand vertically */
-.vbox {
-  /* current syntax */
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
+.container {
   display: flex;
-
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
 }
 
-/* items flex/expand horizontally */
-.hbox {
-  /* current syntax */
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: flex;
-
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.left {
+  height: 100vh;
+  width: 70%;
+  background: blue;
 }
 
-.space-between {
-  /* current syntax */
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  justify-content: space-between;
-}
-
-.main-view {
-}
-
-.side-panel {
+.right {
+  height: 100vh;
+  width: 30%;
+  background: silver;
 }

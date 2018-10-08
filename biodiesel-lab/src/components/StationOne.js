@@ -9,10 +9,14 @@ class StationOne extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Map Page</h1>
-        <ControlPanel />
-        <SidePanel {...this.props} />
+      <div className="container">
+        <div className="left">
+          <h1>Map Page</h1>
+        </div>
+        <div className="right">
+          <ControlPanel />
+          <SidePanel {...this.props} />
+        </div>
       </div>
     );
   }
