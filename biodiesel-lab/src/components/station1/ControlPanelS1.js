@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../compstyles/ControlPanel.css";
 
-class ControlPanel extends Component {
+class ControlPanelS1 extends Component {
   constructor(props) {
     super(props);
 
@@ -33,4 +33,4 @@ class ControlPanel extends Component {
   }
 }
 
-export default ControlPanel;
+export default ControlPanelS1;

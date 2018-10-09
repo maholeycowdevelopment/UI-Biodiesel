@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import ControlPanel from "./station1/ControlPanel";
-import SidePanel from "./shared/SidePanel";
+import Map from "./stationimages/moscow-poster.png";
+import SidePanelS1 from "./station1/SidePanelS1";
 
 class StationOne extends Component {
   constructor(props) {
@@ -11,11 +11,10 @@ class StationOne extends Component {
     return (
       <div className="container">
         <div className="left">
-          <h1>Map Page</h1>
+          <img src={Map} alt="Map Page" />
         </div>
         <div className="right">
-          <ControlPanel />
-          <SidePanel {...this.props} />
+          <SidePanelS1 {...this.props} />
         </div>
       </div>
     );
