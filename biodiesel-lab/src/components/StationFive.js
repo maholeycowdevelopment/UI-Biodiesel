@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import SidePanel from "./shared/SidePanel";
+import ReactantImg from "./stationimages/ReactantImg.png";
+import SidePanelS5 from "./station5/SidePanelS5";
 
 class StationFive extends Component {
   constructor(props) {
@@ -8,9 +9,13 @@ class StationFive extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Station Five</h1>
-        <SidePanel {...this.props} />
+      <div className="container">
+        <div className="left">
+          <img src={ReactantImg} alt="Reactant Image" />
+        </div>
+        <div className="right">
+          <SidePanelS5 {...this.props} />
+        </div>
       </div>
     );
   }

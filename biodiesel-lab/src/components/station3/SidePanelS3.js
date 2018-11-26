@@ -4,6 +4,27 @@ import "../shared/SidePanel.css";
 import ControlPanelS3 from "./ControlPanelS3";
 
 class SidePanelS3 extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      criteriaMet: false
+    };
+
+    this.tryNextStation = this.tryNextStation.bind(this);
+    this.changeCriteriaMet = this.changeCriteriaMet.bind(this);
+  }
+
+  tryNextStation() {
+    if (this.state.criteriaMet) this.props.nextStation();
+  }
+
+  changeCriteriaMet() {
+    this.setState({
+      criteriaMet: true
+    });
+  }
+
   render() {
     return (
       <div className="side-panel">
@@ -11,9 +32,11 @@ class SidePanelS3 extends Component {
           <img src={logo} alt="University Logo" />
         </div>
         <div className="ctrl-panel-container">
-          <ControlPanelS3 />
+          <ControlPanelS3 criteriaMet={this.changeCriteriaMet} />
         </div>
-        <button onClick={this.props.nextStation}>Next</button>
+        <button className="next-btn" onClick={this.tryNextStation}>
+          Next
+        </button>
       </div>
     );
   }

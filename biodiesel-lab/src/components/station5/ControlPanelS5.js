@@ -1,17 +1,34 @@
 import React, { Component } from "react";
 import "../compstyles/ControlPanel.css";
 
-class ControlPanelS2 extends Component {
+class ControlPanelS5 extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      gallonsInReactor: 0,
       selectedOption: "option1"
     };
 
+    this.mixReactant = this.mixReactant.bind(this);
     this.handleOptionChange = this.handleOptionChange.bind(this);
-    this.pumpOil = this.pumpOil.bind(this);
+  }
+
+  mixReactant() {
+    let mixVerified = false;
+
+    switch (this.state.selectedOption) {
+      case "option1":
+        mixVerified = false;
+        break;
+      case "option2":
+        mixVerified = false;
+        break;
+      case "option3":
+        mixVerified = true;
+        break;
+    }
+
+    if (mixVerified) this.props.criteriaMet();
   }
 
   handleOptionChange(changeEvent) {
@@ -20,37 +37,14 @@ class ControlPanelS2 extends Component {
     });
   }
 
-  pumpOil() {
-    let gallonsToPump = 0;
-
-    switch (this.state.selectedOption) {
-      case "option1":
-        gallonsToPump = 200;
-        break;
-      case "option2":
-        gallonsToPump = 100;
-        break;
-      case "option3":
-        gallonsToPump = 400;
-        break;
-    }
-
-    let newOilAmount = this.state.gallonsInReactor + gallonsToPump;
-
-    this.setState({
-      gallonsInReactor: newOilAmount
-    });
-
-    if (newOilAmount >= 400) this.props.criteriaMet();
-  }
-
   render() {
     return (
       <div className="control-panel">
-        <p className="header-text">How many gallons would you like to pump? </p>
-        <p className="info-text">
-          Gallons in Reactor: <span>{this.state.gallonsInReactor}</span>
+        <p className="header-text">
+          Time to mix some reactant in! Pick a reactant, specify the percentage
+          split and how long to wait after mixing.
         </p>
+        <p className="info-text">Reactant: Sodium Methoxide</p>
         <form>
           <div className="radio">
             <label>
@@ -60,7 +54,7 @@ class ControlPanelS2 extends Component {
                 checked={this.state.selectedOption === "option1"}
                 onChange={this.handleOptionChange}
               />
-              200
+              50/50
             </label>
           </div>
           <div className="radio">
@@ -71,7 +65,7 @@ class ControlPanelS2 extends Component {
                 checked={this.state.selectedOption === "option2"}
                 onChange={this.handleOptionChange}
               />
-              100
+              60/40
             </label>
           </div>
           <div className="radio">
@@ -82,16 +76,16 @@ class ControlPanelS2 extends Component {
                 checked={this.state.selectedOption === "option3"}
                 onChange={this.handleOptionChange}
               />
-              400
+              80/20
             </label>
           </div>
         </form>
-        <button className="control-btn" onClick={this.pumpOil}>
-          Pump Oil
+        <button className="control-btn" onClick={this.mixReactant}>
+          Mix
         </button>
       </div>
     );
   }
 }
 
-export default ControlPanelS2;
+export default ControlPanelS5;

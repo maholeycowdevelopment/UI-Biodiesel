@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 import "../compstyles/ControlPanel.css";
 
-class ControlPanelS2 extends Component {
+class ControlPanelS6 extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      gallonsInReactor: 0,
+      waterWashCount: 0,
       selectedOption: "option1"
     };
 
     this.handleOptionChange = this.handleOptionChange.bind(this);
-    this.pumpOil = this.pumpOil.bind(this);
+    this.waterWash = this.waterWash.bind(this);
   }
 
   handleOptionChange(changeEvent) {
@@ -20,36 +20,37 @@ class ControlPanelS2 extends Component {
     });
   }
 
-  pumpOil() {
-    let gallonsToPump = 0;
+  waterWash() {
+    let waterWashAmt = 0;
 
     switch (this.state.selectedOption) {
       case "option1":
-        gallonsToPump = 200;
+        waterWashAmt = 15;
         break;
       case "option2":
-        gallonsToPump = 100;
+        waterWashAmt = 10;
         break;
       case "option3":
-        gallonsToPump = 400;
+        waterWashAmt = 5;
         break;
     }
 
-    let newOilAmount = this.state.gallonsInReactor + gallonsToPump;
-
     this.setState({
-      gallonsInReactor: newOilAmount
+      waterWashCount: waterWashAmt
     });
 
-    if (newOilAmount >= 400) this.props.criteriaMet();
+    if (waterWashAmt >= 11) this.props.criteriaMet();
   }
 
   render() {
     return (
       <div className="control-panel">
-        <p className="header-text">How many gallons would you like to pump? </p>
+        <p className="header-text">
+          We need to water wash with 25-50 gallons per wash. How many times
+          should we do this?{" "}
+        </p>
         <p className="info-text">
-          Gallons in Reactor: <span>{this.state.gallonsInReactor}</span>
+          Number of water washes: <span>{this.state.waterWashCount}</span>
         </p>
         <form>
           <div className="radio">
@@ -60,7 +61,7 @@ class ControlPanelS2 extends Component {
                 checked={this.state.selectedOption === "option1"}
                 onChange={this.handleOptionChange}
               />
-              200
+              11-15
             </label>
           </div>
           <div className="radio">
@@ -71,7 +72,7 @@ class ControlPanelS2 extends Component {
                 checked={this.state.selectedOption === "option2"}
                 onChange={this.handleOptionChange}
               />
-              100
+              6-10
             </label>
           </div>
           <div className="radio">
@@ -82,16 +83,16 @@ class ControlPanelS2 extends Component {
                 checked={this.state.selectedOption === "option3"}
                 onChange={this.handleOptionChange}
               />
-              400
+              1-5
             </label>
           </div>
         </form>
-        <button className="control-btn" onClick={this.pumpOil}>
-          Pump Oil
+        <button className="control-btn" onClick={this.waterWash}>
+          Water Wash
         </button>
       </div>
     );
   }
 }
 
-export default ControlPanelS2;
+export default ControlPanelS6;

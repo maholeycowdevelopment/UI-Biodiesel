@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   nextStation() {
-    if (this.state.currentStation < 6) {
+    if (this.state.currentStation < 7) {
       this.setState({
         currentStation: this.state.currentStation + 1
       });

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import logo from "../shared/BlackUILogo.svg";
 import "../shared/SidePanel.css";
-import ControlPanelS1 from "./ControlPanelS1";
+import ControlPanelS6 from "./ControlPanelS6";
 
-class SidePanelS1 extends Component {
+class SidePanelS6 extends Component {
   constructor(props) {
     super(props);
 
@@ -32,7 +32,7 @@ class SidePanelS1 extends Component {
           <img src={logo} alt="University Logo" />
         </div>
         <div className="ctrl-panel-container">
-          <ControlPanelS1 criteriaMet={this.changeCriteriaMet} />
+          <ControlPanelS6 criteriaMet={this.changeCriteriaMet} />
         </div>
         <button className="next-btn" onClick={this.tryNextStation}>
           Next
@@ -42,4 +42,4 @@ class SidePanelS1 extends Component {
   }
 }
 
-export default SidePanelS1;
+export default SidePanelS6;

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import SidePanel from "./shared/SidePanel";
-import BigReactor from "./stationimages/ReactorBig.png";
+import BigReactorHeat from "./stationimages/ReactorBigHeat.png";
 import SidePanelS3 from "./station3/SidePanelS3";
 
 class StationThree extends Component {
@@ -12,7 +11,7 @@ class StationThree extends Component {
     return (
       <div className="container">
         <div className="left">
-          <img src={BigReactor} alt="Map Page" />
+          <img src={BigReactorHeat} alt="Map Page" />
         </div>
         <div className="right">
           <SidePanelS3 {...this.props} />
