@@ -10,9 +10,7 @@ class StationFive extends Component {
   render() {
     return (
       <div className="container">
-        <div className="left">
-          <img src={ReactantImg} alt="Reactant Image" />
-        </div>
+        <img className="left" src={ReactantImg} alt="Reactant Image" />
         <div className="right">
           <SidePanelS5 {...this.props} />
         </div>

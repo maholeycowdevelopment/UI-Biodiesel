@@ -10,9 +10,7 @@ class StationSeven extends Component {
   render() {
     return (
       <div className="container">
-        <div className="left">
-          <img src={BigReactorHeat} alt="Heat Reactor" />
-        </div>
+        <img className="left" src={BigReactorHeat} alt="Heat Reactor" />
         <div className="right">
           <SidePanelS7 {...this.props} />
         </div>

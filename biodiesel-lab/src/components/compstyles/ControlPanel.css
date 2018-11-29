@@ -28,16 +28,34 @@ i {
   text-align: center;
 }
 
-.arrow-right {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  margin-left: 10px;
+.triangle-right {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  margin-left: 5px;
+  border-top: 15px solid transparent;
+  border-left: 30px solid #eeb100;
+  border-bottom: 15px solid transparent;
 }
 
-.arrow-left {
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-  margin-right: 10px;
+.triangle-right:hover {
+  border-left: 30px solid #ffbf00;
+  cursor: pointer;
+}
+
+.triangle-left {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  margin-right: 5px;
+  border-top: 15px solid transparent;
+  border-right: 30px solid #eeb100;
+  border-bottom: 15px solid transparent;
+}
+
+.triangle-left:hover {
+  border-right: 30px solid #ffbf00;
+  cursor: pointer;
 }
 
 /* Button styling */
@@ -50,4 +68,9 @@ i {
   margin: auto;
   width: 70%;
   margin-left: 15%;
+}
+
+.control-btn:hover {
+  background-color: #ffbf00;
+  cursor: pointer;
 }

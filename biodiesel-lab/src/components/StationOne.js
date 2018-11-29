@@ -10,9 +10,7 @@ class StationOne extends Component {
   render() {
     return (
       <div className="container">
-        <div className="left">
-          <img src={Map} alt="Map Page" />
-        </div>
+        <img className="left" src={Map} alt="Map Page" />
         <div className="right">
           <SidePanelS1 {...this.props} />
         </div>

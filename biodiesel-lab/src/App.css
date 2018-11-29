@@ -21,23 +21,24 @@
 }
 
 .side-panel {
+  height: 100%;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
   display: flex;
-  flex-wrap: wrap;
-}
 
-.ui-logo {
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+
+  -webkit-align-content: space-around;
+  align-content: space-around;
   margin-left: 25%;
-  margin-top: 10%;
-}
-
-.ctrl-panel {
-  margin-left: 15%;
-  margin-top: 18%;
 }
 
 .next-btn {
-  margin-top: 35%;
-  margin-left: 15%;
   background-color: transparent;
   border: solid #f0b203;
   padding: 10px;
@@ -47,5 +48,9 @@
   font-size: 16px;
   border-radius: 20px;
   width: 70%;
-  align-self: flex-end;
+}
+
+.next-btn:hover {
+  background-color: #f0b203;
+  cursor: pointer;
 }

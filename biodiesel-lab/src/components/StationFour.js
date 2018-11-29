@@ -10,9 +10,7 @@ class StationFour extends Component {
   render() {
     return (
       <div className="container">
-        <div className="left">
-          <img src={BigReactor} alt="Map Page" />
-        </div>
+        <img className="left" src={BigReactor} alt="Map Page" />
         <div className="right">
           <SidePanelS4 {...this.props} />
         </div>

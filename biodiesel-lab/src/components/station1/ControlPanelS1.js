@@ -69,6 +69,7 @@ class ControlPanelS1 extends Component {
         this.state.gallonsCollected +
         this.oilLocations[this.state.currentLocation].oilAmount
     });
+    this.oilLocations[this.state.currentLocation].oilAmount = 0;
   }
 
   render() {
@@ -85,16 +86,9 @@ class ControlPanelS1 extends Component {
         <p className="info-text">
           Gallons Collected: <span>{this.state.gallonsCollected}</span>
         </p>
-        <p className="info-text">
-          Distance Traveled (mi): <span>{this.state.milesTraveled}</span>
-        </p>
         <div className="arrow-container">
-          <button>
-            <i className="arrow-left" onClick={this.previousLocation} />
-          </button>
-          <button>
-            <i className="arrow-right" onClick={this.nextLocation} />
-          </button>
+          <button className="triangle-left" onClick={this.previousLocation} />
+          <button className="triangle-right" onClick={this.nextLocation} />
         </div>
         <button className="control-btn" onClick={this.collectOil}>
           Collect

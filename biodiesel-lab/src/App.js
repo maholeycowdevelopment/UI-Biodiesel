@@ -7,6 +7,7 @@ import StationFour from "./components/StationFour";
 import StationFive from "./components/StationFive";
 import StationSix from "./components/StationSix";
 import StationSeven from "./components/StationSeven";
+import StationEight from "./components/StationEight";
 
 class App extends Component {
   constructor(props) {
@@ -41,6 +42,8 @@ class App extends Component {
         return <StationSix nextStation={this.nextStation.bind(this)} />;
       case 6:
         return <StationSeven nextStation={this.nextStation.bind(this)} />;
+      case 7:
+        return <StationEight nextStation={this.nextStation.bind(this)} />;
     }
   }
 }

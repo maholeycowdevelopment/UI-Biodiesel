@@ -11,9 +11,7 @@ class StationSix extends Component {
   render() {
     return (
       <div className="container">
-        <div className="left">
-          <img src={StationSixIMG} alt="Station Six Image" />
-        </div>
+        <img className="left" src={StationSixIMG} alt="Station Six Image" />
         <div className="right">
           <SidePanelS6 {...this.props} />
         </div>
